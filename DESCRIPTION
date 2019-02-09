@@ -1,0 +1,11 @@
+Package: lin.eval
+Type: Package
+Title: Performs polynomial evaluation of linearity
+Version: 0.1.0
+Author: Vishesh Shrivastav
+Maintainer: Vishesh Shrivastav <vishesh2k6@gmail.com>
+Description: This package evaluates whether the relationship between two vectors is linear or not
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
