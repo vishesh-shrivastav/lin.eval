@@ -27,5 +27,5 @@ Polynomial evaluation of linearity is a technique of assessing if the best way t
 
     where, `l` is the vector of predictions from linear model and `p` is the vector of predictions from best-fitting polynomial model.
 
-5) If adl is greater than or equal to the threshold value for deviation from linearity, conclude that the relationship is non-linear.
-6) Else if adl is less than the threshold value for deviation from linearity, conclude that although the best-fitting model is not linear, deviation from linearity is not significant and hence, it is still a linear relationship. This is called a Linear 2 type.
+5) If `adl` is greater than or equal to the threshold value for deviation from linearity, conclude that the relationship is non-linear.
+6) Else if `adl` is less than the threshold value for deviation from linearity, conclude that although the best-fitting model is not linear, deviation from linearity is not significant and hence, it is still a linear relationship. This is called a Linear 2 type.
