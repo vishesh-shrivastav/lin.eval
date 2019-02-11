@@ -2,3 +2,6 @@
 
 export(calculate_adl)
 export(poly_eval)
+importFrom(broom,glance)
+importFrom(stats,lm)
+importFrom(stats,predict)

@@ -1,7 +1,7 @@
-#' Computes average deviation from linearity adl
+#' Computes average deviation from linearity adl.
 #'
 #' @param predicted.poly vector of predicted values from best-fitting polynomial model
-#' @param predicted.poly vector of predicted values from linear model
+#' @param predicted.lm vector of predicted values from linear model
 #' @return value for average deviation from linearity as a percentage
 #'
 #' @export
@@ -9,12 +9,13 @@ calculate_adl <- function(predicted.poly, predicted.lm){
   return(mean(abs((predicted.lm - predicted.poly)/predicted.lm) * 100))
 }
 
-#' Establishes if relationship between two vectors is linear or nonlinear
+#' Establishes if relationship between two vectors is linear or nonlinear.
 #' Does not return any value. Prints details of the relationship between x and y.
 #' @param y vector of response values
 #' @param x vector of predictor values
 #' @param threshold optional argument. Threshold percentage value for average deviation from linearity. Defaults to 5.
-#'
+#' @importFrom broom glance
+#' @importFrom stats lm predict
 #' @export
 poly_eval <- function(y, x, threshold){
 

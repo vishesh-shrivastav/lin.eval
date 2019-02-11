@@ -2,7 +2,7 @@
 % Please edit documentation in R/lin_eval.R
 \name{poly_eval}
 \alias{poly_eval}
-\title{Establishes if relationship between two vectors is linear or nonlinear
+\title{Establishes if relationship between two vectors is linear or nonlinear.
 Does not return any value. Prints details of the relationship between x and y.}
 \usage{
 poly_eval(y, x, threshold)
@@ -15,6 +15,6 @@ poly_eval(y, x, threshold)
 \item{threshold}{optional argument. Threshold percentage value for average deviation from linearity. Defaults to 5.}
 }
 \description{
-Establishes if relationship between two vectors is linear or nonlinear
+Establishes if relationship between two vectors is linear or nonlinear.
 Does not return any value. Prints details of the relationship between x and y.
 }

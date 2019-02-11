@@ -2,18 +2,18 @@
 % Please edit documentation in R/lin_eval.R
 \name{calculate_adl}
 \alias{calculate_adl}
-\title{Computes average deviation from linearity adl}
+\title{Computes average deviation from linearity adl.}
 \usage{
 calculate_adl(predicted.poly, predicted.lm)
 }
 \arguments{
 \item{predicted.poly}{vector of predicted values from best-fitting polynomial model}
 
-\item{predicted.poly}{vector of predicted values from linear model}
+\item{predicted.lm}{vector of predicted values from linear model}
 }
 \value{
 value for average deviation from linearity as a percentage
 }
 \description{
-Computes average deviation from linearity adl
+Computes average deviation from linearity adl.
 }
