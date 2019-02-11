@@ -36,7 +36,7 @@ Call the `poly_eval()` function with the following parameters:
 `x`: vector of predictor values  
 `threshold`: threshold value for average deviation from linearity as percentage. Defaults to 5.
 
-```{r}
+```r
 > library("lin.eval")
 > foo <- c(165.3929, 165.3929, 1119.5714, 1119.5714, 2073.7500, 2073.7500, 3027.9286, 3027.9286, 3982.1071, 3982.1071, 4936.2857, 4936.2857, 5890.4643, 5890.4643)
 > bar <- c(386.2143,  386.2143, 840.6548, 840.6548, 1829.6905, 1829.6905, 3074.4048, 3074.4048, 4295.8810, 4295.8810, 5215.2024, 5215.2024, 5553.4524, 5553.4524)
@@ -48,7 +48,7 @@ Although the best fitting model is nonlinear, since average deviation from linea
 ```  
 
 You can check the values stored in the result variable:  
-```{r}
+```r
 > derp$p1
 [1] 8.851095e-12
 > derp$p2
@@ -62,7 +62,7 @@ You can check the values stored in the result variable:
 ## More examples 
 
 Usage without passing in optional argument for adl:  
-```{r}
+```r
 > xx <- c(0, 1, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30)
 > yy <- c(126.6, 101.8, 71.6, 101.6, 68.1, 62.9, 45.5, 41.9, 46.3, 34.1, 38.2, 41.7, 24.7, 41.5, 36.6, 19.6, 22.8, 29.6, 23.5, 15.3, 13.4, 26.8, 9.8, 18.8, 25.9, 19.3)
 > poly_eval(yy, xx)
