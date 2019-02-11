@@ -7,12 +7,12 @@ R package for polynomial evaluation of linearity.
 ## Installation  
 `lin.eval` can be installed via Github:
 
-```{r}
+```r
 if (!require(devtools)) {  
     install.packages('devtools')  
 }  
 devtools::install_github('vishesh-shrivastav/lin.eval')
-```  
+```
   
 ## How it works
 
