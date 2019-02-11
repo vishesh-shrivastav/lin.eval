@@ -33,19 +33,23 @@ poly_eval <- function(y, x, threshold){
   # Extract p-value of 3rd order model
   pval.poly3 <- broom::glance(poly.3.model)$p.value
 
-  cat("p-value for linear model is: ", pval.lm, "\n")
-  cat("p-value for second order polynomial model is: ", pval.poly2, "\n")
-  cat("p-value for third order polynomial model is: ", pval.poly3, "\n")
-
   # Find best fitting model
   # Best-fitting model has lowest p-value
   bfm <- min(pval.lm, pval.poly2, pval.poly3)
+
+  # Vector to store the results
+  res <- list()
+  res$p1 <- pval.lm
+  res$p2 <- pval.poly2
+  res$p3 <- pval.poly3
 
   # Case 1 - linear model is best fitting
   if (bfm == pval.lm) {
     cat("Best fitting model is linear since linear model has lowest p-value\n")
     cat("Linearity established - Linear 1\n")
     cat("No further testing required\n")
+    # Silently return the results
+    invisible(res)
   }
 
   # Case 2 - second order polynomial model is best fitting
@@ -58,6 +62,9 @@ poly_eval <- function(y, x, threshold){
     predicted.lm <- predict(linear.model)
     adl.2 <- calculate_adl(predicted.poly = predicted.poly.2, predicted.lm = predicted.lm)
     cat(paste0("Average Deviation from Linearity: ", round(adl.2, 2), " %\n"))
+
+    # Add the value of adl to the result vector
+    res$adl <- adl.2
 
     # Case 2 - Part 1
     # threshold argument not provided - work with default value of 5
@@ -88,7 +95,8 @@ poly_eval <- function(y, x, threshold){
                    "; linearity is established. We call this linearity type as Linear 2\n"))
       }
     }
-
+    # Silently return the results
+    invisible(res)
     }
 
   # Case 3 - third order polynomial model is best fitting
@@ -101,6 +109,9 @@ poly_eval <- function(y, x, threshold){
     predicted.lm <- predict(linear.model)
     adl.3 <- calculate_adl(predicted.poly = predicted.poly.3, predicted.lm = predicted.lm)
     cat(paste0("Average Deviation from Linearity: ", round(adl.3, 2), " %\n"))
+
+    # Add the value of adl to the result vector
+    res$adl <- adl.3
 
     # Case 3 - Part 1
     # threshold argument not provided - work with default value of 5
@@ -131,6 +142,7 @@ poly_eval <- function(y, x, threshold){
                    "; linearity is established. We call this linearity type as Linear 2\n"))
       }
     }
-
+    # Silently return the results
+    invisible(res)
     }
 }
