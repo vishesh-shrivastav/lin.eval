@@ -1,7 +1,7 @@
 # lin.eval
 R package for polynomial evaluation of linearity.
 
-**About**
+**About**  
 `lin.eval` is a R package for performing polynomial evaluation of linearity.
 
 **Installation**  
