@@ -16,6 +16,10 @@ calculate_adl <- function(predicted.poly, predicted.lm){
 #' @param threshold optional argument. Threshold percentage value for average deviation from linearity. Defaults to 5.
 #' @importFrom broom glance
 #' @importFrom stats lm predict
+#' @examples
+#' foo <- c(1000, 4000, 5000, 4500, 3000, 4000, 9000, 11000, 15000, 12000, 7000, 3000)
+#' bar <- c(9914, 40487, 54324, 50044, 34719, 42551, 94871, 118914, 158484, 131348, 78504, 36284)
+#' poly_eval(bar, foo)
 #' @export
 poly_eval <- function(y, x, threshold){
 
