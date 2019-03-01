@@ -5,7 +5,14 @@ R package for polynomial evaluation of linearity.
 `lin.eval` is a R package for performing polynomial evaluation of linearity.
 
 ## Installation  
-`lin.eval` can be installed via Github:
+
+Installing through CRAN:  
+
+```r
+install.packages('lin.eval')
+```
+
+Installing through Github:
 
 ```r
 if (!require(devtools)) {  
