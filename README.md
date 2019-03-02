@@ -23,7 +23,7 @@ devtools::install_github('vishesh-shrivastav/lin.eval')
   
 ## How it works
 
-Polynomial evaluation of linearity is a technique of assessing if the best way to describe the relationship between two vectors.
+Polynomial evaluation of linearity is a technique of assessing the best way to describe the relationship between two vectors.
 
 1) Fit three models - linear, second-order polynomial and third-order polynomial
 2) Find out best-fitting model among the three by comparing their p-values. Model with the lowest p-value out of the three is the best-fitting one.
